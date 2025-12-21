@@ -1,0 +1,6 @@
+// Solution for Animatanto
+#include <iostream>
+
+int main() {
+    return 0;
+}
