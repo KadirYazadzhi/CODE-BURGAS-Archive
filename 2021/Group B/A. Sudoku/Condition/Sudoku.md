@@ -1,0 +1,3 @@
+# Sudoku
+
+Condition goes here.
