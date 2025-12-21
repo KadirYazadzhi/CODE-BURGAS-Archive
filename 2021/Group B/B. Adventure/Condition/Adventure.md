@@ -1,0 +1,3 @@
+# Adventure
+
+Condition goes here.
