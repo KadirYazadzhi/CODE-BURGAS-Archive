@@ -18,16 +18,18 @@ It contains **100% completed solutions** for:
 I have actively participated in the "Group A" (highest difficulty) category of the competition with the following results:
 
 ### 2025 - 🥇 1st Place (Group A)
+
 *Winner of the CODE@BURGAS 2025 competition in the most advanced category.*
 
-![Certificate 2025](path/to/certificate_2025.jpg)
-*(Upload your certificate image to the repository and link it here)*
+* [View Certificate 2025](https://kadiryazadzhi.github.io/portfolio/Image/Certificate/Other/CODE%40BURGAS-2025-Certificate.webp)
+* [View Diploma 2025](https://kadiryazadzhi.github.io/portfolio/Image/Certificate/Other/CODE%40BURGAS-2025-Diploma.webp)
 
 ### 2024 - 🥈 2nd Place (Group A)
+
 *Runner-up in the CODE@BURGAS 2024 competition.*
 
-![Certificate 2024](path/to/certificate_2024.jpg)
-*(Upload your certificate image to the repository and link it here)*
+* [View Certificate 2024](https://kadiryazadzhi.github.io/portfolio/Image/Certificate/Other/CODE@BURGAS%20-%20Certificate%20(PNG).webp)
+* [View Diploma 2024](https://kadiryazadzhi.github.io/portfolio/Image/Certificate/Other/CODE@BURGAS%20-%20Diploma%20(PNG).webp)
 
 ## 📂 Repository Structure
 
