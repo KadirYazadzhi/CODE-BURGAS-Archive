@@ -1,6 +1,23 @@
-// Solution for Compression
 #include <iostream>
 
+using namespace std;
+
 int main() {
+    int a, b, sum;
+    cin >> a;
+
+    while (a >= 10) {
+        b = a;
+        sum = 0;
+
+        while (b != 0) {
+            sum += b % 10;
+            b /= 10;
+        }
+
+        a = sum;
+    }
+
+    cout << a << endl;
     return 0;
 }
