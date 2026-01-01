@@ -5,8 +5,7 @@
 using namespace std;
 
 void solve() {
-    int w, h, r;
-    double circleArea, bluePartArea;
+    double w, h, r, circleArea, bluePartArea;
     cin >> w;
 
     h = w * 0.6;
@@ -22,9 +21,7 @@ int main() {
     int n;
     cin >> n;
 
-    while (n--) {
-        solve();
-    }
+    while (n--) solve();
 
     return 0;
 }
