@@ -74,6 +74,6 @@ int main() {
     cin.tie(NULL);
 
     cout << solve() << endl;
-    
+
     return 0;
 }
