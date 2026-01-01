@@ -1,49 +1,70 @@
-#include <iomanip>
 #include <iostream>
 #include <vector>
+#include <queue>
+#include <limits>
 
 using namespace std;
 
-const double INF = 1e18;
-
-void readPositions(vector<vector<double>>& positions, int n) {
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) {
-            cin >> positions[i][j];
-
-            if (positions[i][j] == -1) positions[i][j] = INF;
-            if (i == j) positions[i][j] = 0;
-        }
-    }
-}
+const double INF = numeric_limits<double>::max();
 
 int main() {
-    int n, startPoint, endPoint;
-    double price;
-    cin >> n;
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
 
-    vector<vector<double>> positions(n, vector<double>(n));
-    readPositions(positions, n);
+    int n;
+    if (!(cin >> n)) return 0;
 
-    cin >> startPoint >> endPoint >> price;
-
-    startPoint--;
-    endPoint--;
-
-    for (int k = 0; k < n; k++) {
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                if (positions[i][k] != INF && positions[k][j] != INF) {
-                    if (positions[i][j] > positions[i][k] + positions[k][j]) positions[i][j] = positions[i][k] + positions[k][j];
-                }
+    vector<vector<pair<int, double>>> adj(n + 1);
+    for (int i = 1; i <= n; ++i) {
+        for (int j = 1; j <= n; ++j) {
+            double dist;
+            cin >> dist;
+            if (dist > 0) {
+                adj[i].push_back({j, dist});
             }
         }
     }
 
-    double minDistance = positions[startPoint][endPoint];
+    int start, end;
+    cin >> start >> end;
 
-    if (minDistance == INF) return -1;
-    else cout << fixed << setprecision(2) << minDistance * price << endl;
+    double price_per_km;
+    cin >> price_per_km;
+
+    if (start == end) {
+        cout << 0 << endl;
+        return 0;
+    }
+
+    vector<double> min_dist(n + 1, INF);
+    priority_queue<pair<double, int>, vector<pair<double, int>>, greater<pair<double, int>>> pq;
+
+    min_dist[start] = 0;
+    pq.push({0, start});
+
+    while (!pq.empty()) {
+        double d = pq.top().first;
+        int u = pq.top().second;
+        pq.pop();
+
+        if (d > min_dist[u]) continue;
+
+        for (auto& edge : adj[u]) {
+            int v = edge.first;
+            double weight = edge.second;
+
+            if (min_dist[u] + weight < min_dist[v]) {
+                min_dist[v] = min_dist[u] + weight;
+                pq.push({min_dist[v], v});
+            }
+        }
+    }
+
+    if (min_dist[end] == INF) {
+        cout << 0 << endl;
+    } else {
+        cout << min_dist[end] * price_per_km << endl;
+    }
 
     return 0;
 }
