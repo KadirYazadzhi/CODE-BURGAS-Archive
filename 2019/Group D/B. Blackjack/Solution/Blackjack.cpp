@@ -9,7 +9,7 @@ int blackjack(int arr[], int n, int m) {
     for (int i = 0; i < n; i++) {
         for (int j = i + 1; j < n; j++) {
             for (int k = j + 1; k < n; k++) {
-                if (arr[j] + arr[i] + arr[k] < m && arr[j] + arr[i] + arr[k] > max) max = arr[j] + arr[i] + arr[k];
+                if (arr[j] + arr[i] + arr[k] <= m && arr[j] + arr[i] + arr[k] > max) max = arr[j] + arr[i] + arr[k];
             }
         }
     }
@@ -23,12 +23,11 @@ int main() {
 
     int arr[n];
 
-    for (int i = 0; i < n; i++) {
-        cin >> arr[i];
-    }
+    for (int i = 0; i < n; i++) cin >> arr[i];
 
     cin >> m;
 
     cout << blackjack(arr, n, m) << endl;
+
     return 0;
 }
