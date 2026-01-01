@@ -1,24 +1,28 @@
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
-int days(int month) {
-  const int days[12] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+int getYearDay(int day, int month) {
+  const int monthDays[12] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+  int total = 0;
 
-  return days[month];
+  for (int i = 0; i < month - 1; i++) total += monthDays[i];
+
+  total += day;
+
+  return total;
 }
 
 int main() {
-  int firstDay, secondDay, firstMonth, secondMonth, daysToBirthday = 0;
+  int d1, m1, d2, m2;
 
-  cin >> firstDay >> firstMonth;
-  cin >> secondDay >> secondMonth;
+  cin >> d1 >> m1 >> d2 >> m2;
 
-  if (firstMonth == secondMonth) daysToBirthday = secondDay - firstDay;
-  else daysToBirthday = (days(firstMonth) - firstDay) + (days(secondMonth) - secondDay);
+  int dayOfYear1 = getYearDay(d1, m1);
+  int dayOfYear2 = getYearDay(d2, m2);
 
-
-  cout << daysToBirthday << endl;
+  cout << dayOfYear2 - dayOfYear1 << endl;
 
   return 0;
 }
