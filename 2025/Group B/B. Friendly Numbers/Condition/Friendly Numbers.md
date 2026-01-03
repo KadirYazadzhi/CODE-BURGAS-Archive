@@ -1,13 +1,30 @@
 # Friendly Numbers
 
 ## Description
-Given two integers $A$ and $B$. We call them friendly if the sum of the divisors of $A$ (excluding $A$ itself) is equal to $B$, and the sum of the divisors of $B$ (excluding $B$ itself) is equal to $A$. Write a computer program that checks whether two integers are friendly.
 
-## Input
-*(The problem text does not explicitly state the input format, but implies two integers A and B.)*
+Two integers **A** and **B** are given. We call them **friendly** if the sum of the divisors of **A** (excluding **A** itself) is equal to **B**, and the sum of the divisors of **B** (excluding **B** itself) is equal to **A**. Write a computer program that checks whether two integers are friendly.
 
-## Output
-*(The problem text does not explicitly state the output format, but implies a boolean answer like YES/NO.)*
+### Input
 
-## Example
-*(No example provided in the original text.)*
+The first line of the standard input contains two integers, **A** and **B**.
+
+### Output
+
+On a single line of the standard output, print: **YES** if the two numbers are friendly, and **NO** if they are not.
+
+---
+
+### Example Input
+
+```text
+220 284
+
+```
+
+### Example Output
+
+```text
+YES
+
+```
+
