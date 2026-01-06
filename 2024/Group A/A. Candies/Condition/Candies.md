@@ -19,12 +19,18 @@ On a single line of the standard output, the program should output the total val
 ## Example
 
 ### Input
+
 ```
-... (No example input provided in the original text) ...
+10 5
+2 3
+5 6
+1 2
+4 5
+3 4
 ```
 
 ### Output
+
 ```
-... (No example output provided in the original text) ...
+11 1
 ```
-**(Note: The example section of the original problem was missing. I have added a placeholder.)**
