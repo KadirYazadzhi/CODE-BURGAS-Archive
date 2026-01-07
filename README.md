@@ -1,5 +1,7 @@
 # CODE-BURGAS Archive
 
+![CODE@BURGAS](https://codeburgas.com/assets/images/code@burgas.png)
+
 ## 🏆 About the Competition
 
 **CODE@BURGAS** is a prestigious student programming competition organized by **Burgas Free University (BFU)** in partnership with the **Municipality of Burgas**. It brings together talented young programmers to solve algorithmic challenges in a competitive environment. The event typically features multiple difficulty groups (A, B, C, etc.) tailored to different age groups and skill levels, fostering the development of computer science education in the region and beyond.
